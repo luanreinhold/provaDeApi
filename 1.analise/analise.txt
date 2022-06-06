@@ -1,0 +1,37 @@
+1) visualizar pets      get     '/pet'
+
+
+resp
+{
+    "id": "iddopet",
+    "nome": "nomedopet"
+    
+}
+
+
+
+
+2) inserir pet          post        '/pet'
+req.body
+
+req {
+    "nome": "rex"
+}
+
+resp {
+    "id": "iddopet",
+    "nome": "nomedopet"
+}
+
+
+3) deletarPet           deletar     '/deletar
+
+req
+{
+    "id": id
+}
+
+resp
+{
+    resp.status(200)
+}

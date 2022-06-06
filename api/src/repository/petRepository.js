@@ -22,3 +22,15 @@ export async function verPets () {
     const resposta = await con.query (comando);
     return resposta[0];
 }
+
+export async function deletarPet (id) {
+    const comando =
+
+    `
+    delete from tb_pet
+    where id_pet = ?;
+
+    `
+    const resposta = await con.query (comando [id]);
+    resposta.affectedROWS;
+}

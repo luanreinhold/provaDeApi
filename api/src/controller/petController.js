@@ -1,5 +1,5 @@
 import {Router } from 'express'
-import { inserirPET, verPets } from '../repository/petRepository.js';
+import { deletarPet, inserirPET, verPets } from '../repository/petRepository.js';
 
 const server = Router();
 
@@ -19,7 +19,8 @@ server.post('/pet', async (req, resp) => {
 
     } catch (err) {
         resp.status(400).send({
-            erro: err.message
+            erro: err.message 
+
         })
     }
     
@@ -40,5 +41,25 @@ server.get('/pet', async (req, resp) => {
 
 })
 
+
+server.delete('/pet/:id', async (req, resp) => {
+
+    try{
+
+        const {id} = req.params;
+        console.log(id)
+
+        const x = await deletarPet(id)
+
+
+        resp.status(200).send()
+
+    } catch(err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+
+})
 
 export default server

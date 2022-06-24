@@ -28,7 +28,7 @@ export async function deletarPet (id) {
 
     `
     delete from     tb_pet
-    where           id_pet like = ?;
+    where           id_pet = ?;
 
     `
     const resposta = await con.query (comando, [id.id]);

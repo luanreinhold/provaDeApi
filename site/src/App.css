@@ -1,0 +1,32 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containertabela {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+table {
+  width: 50%;
+  height: 50%;
+  background-color: rosybrown;
+}
+
+
+thead{
+  border: solid 1px black;
+}
+
+.cadastro {
+  margin-bottom: 5em;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
